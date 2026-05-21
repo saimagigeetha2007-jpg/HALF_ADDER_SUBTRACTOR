@@ -73,6 +73,5 @@ endmodule
 
 **Output/TIMING Waveform**
 ![alt text](image-1.png)
-
 **Result:**
 The Half Adder and Half Subtractor circuits were successfully designed using Verilog, and their truth tables were verified using simulation in Quartus.
