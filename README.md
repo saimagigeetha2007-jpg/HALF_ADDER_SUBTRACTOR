@@ -50,28 +50,49 @@ Figure -02 HALF Subtractor
 
 **Program:**
 
-```
-module ex3(
-    input A, B,
-    output Sum, Carry,
-    output Diff, Borrow
+half adder
+module exp3 (
+    input  wire a, b,     
+    output wire sum,     
+    output wire carry    
 );
 
-// Half Adder
-assign Sum = A ^ B;
-assign Carry = A & B;
+    
+    assign sum   = a ^ b;   
+    assign carry = a & b;   
+    endmodule
 
-// Half Subtractor
-assign Diff = A ^ B;
-assign Borrow = (~A) & B;
+    half subracter
+
+    module half_subtractor (
+    input  wire a, b,         // Inputs
+    output wire diff, borrow  // Outputs
+);
+
+    // Logic equations
+    assign diff   = a ^ b;     // XOR for difference
+    assign borrow = ~a & b;    // Borrow when a < b
 
 endmodule
-```
+
+
 
 **RTL Schematic**
-![alt text](image.png)
+half adder
+<img width="389" height="269" alt="Screenshot 2026-05-21 113751" src="https://github.com/user-attachments/assets/bbdfff22-edc8-4fe9-b8e7-bbc73fcf0269" />
+half subractor
+
+<img width="564" height="329" alt="Screenshot 2026-05-21 113755" src="https://github.com/user-attachments/assets/8410834d-3aaf-4a55-a4d9-1f11743cfdd6" />
+
+
 
 **Output/TIMING Waveform**
-![alt text](image-1.png)
+half adder
+<img width="1419" height="650" alt="Screenshot 2026-05-21 113815" src="https://github.com/user-attachments/assets/a807cbc3-1f52-4e8b-99ad-5a225093c51a" />
+half subractor
+<img width="1285" height="629" alt="Screenshot 2026-05-21 113832" src="https://github.com/user-attachments/assets/94700387-7cd5-4e52-949b-f4ec7b2ec1fb" />
+
+
+
 **Result:**
-The Half Adder and Half Subtractor circuits were successfully designed using Verilog, and their truth tables were verified using simulation in Quartus.
+This Program was excecuted successfully
